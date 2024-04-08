@@ -1,15 +1,19 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-
-import "./index.css";
 import App from "./App";
-import { AuthProvider } from "./components/store/auth-context";
-
+import reportWebVitals from "./reportWebVitals";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
+import { Provider } from "react-redux";
+import store from "./store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </AuthProvider>
+  </Provider>
 );
+
+reportWebVitals();
