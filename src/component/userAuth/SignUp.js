@@ -87,14 +87,13 @@ const SignUp = () => {
         <Row className="justify-content-center min-vh-100 align-items-center">
           {message && (
             <div className="fixed-top p-0">
-              {" "}
-              <Notification message={message} variant={variant} />{" "}
+              <Notification message={message} variant={variant} />
             </div>
           )}
           <Col>
             <div className="text-center pb-4">
               <h3>
-                Welcome to{" "}
+                Welcome to
                 <span className="text-danger fst-italic">Mail Box Client </span>
               </h3>
               <p>Please Sign Up/Login to continue.</p>
